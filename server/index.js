@@ -20,6 +20,9 @@ app.use(cors());
 app.use('/posts',postRoutes);
 app.use('/users', userRoutes);
 
+app.get('/',(req,res)=>{
+    res.send('APP IS RUNNING');
+})
 
 const mongoURI = process.env.MONGODB_URI;
 const PORT = process.env.PORT ;
